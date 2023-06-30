@@ -10,6 +10,7 @@ const Welcome = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity
+                style={styles.buttonStart}
                 onPress={() => {
                     navigation.navigate('Home')
                 }
@@ -26,8 +27,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: 'white',
     },
+    buttonStart:{
+        backgroundColor: 'black',
+        paddingHorizontal: 5,
+        paddingVertical: 15,
+         width: '50%', borderRadius: 15,
+    }
 });
 
 //make this component available to the app

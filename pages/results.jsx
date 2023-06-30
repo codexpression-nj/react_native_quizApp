@@ -46,12 +46,7 @@ const Results = ({navigation,route}) => {
                 onPress={()=>{
                     // restartQuiz();
                     navigation.navigate('Welcome');}}
-                style={{
-                    backgroundColor: 'black',
-                    paddingHorizontal: 5,
-                    paddingVertical: 15,
-                     width: '50%', borderRadius: 15,
-                }}>
+                style={styles.btn}>
                     <Text style={{
                         textAlign: 'center', color: 'white', fontSize: 20
                     }}>Retry</Text>
@@ -72,6 +67,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#2c3e50',
     },
+    btn:{
+        backgroundColor: 'black',
+        paddingHorizontal: 5,
+        paddingVertical: 15,
+         width: '50%', borderRadius: 15,
+    }
 });
 
 //make this component available to the app
