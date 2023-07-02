@@ -9,13 +9,14 @@ const Welcome = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            <Text style={{margin:20}}>Get started to test your knowledge</Text>
             <TouchableOpacity
                 style={styles.buttonStart}
                 onPress={() => {
                     navigation.navigate('Home')
                 }
                 }>
-                <Text>Start</Text>
+                <Text style={styles.buttonTxt}>Start</Text>
             </TouchableOpacity>
         </View>
     );
@@ -34,7 +35,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
         paddingVertical: 15,
          width: '50%', borderRadius: 15,
-    }
+
+    },
+    buttonTxt:{
+        textAlign: 'center', color: 'white', fontSize: 20,
+   }
 });
 
 //make this component available to the app
