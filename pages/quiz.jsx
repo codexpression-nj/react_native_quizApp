@@ -46,18 +46,18 @@ const Quiz = ({ navigation }) => {
             Animated.timing(progress, {
             
                 toValue: currentQuestionIndex+2,
-                duration: 2000,
+                duration: 1000,
                 useNativeDriver: false
             }),
             Animated.sequence([
                 Animated.timing(fadeAnim,{
                     toValue: 0,
-                    duration: 100,
+                    duration: 1000,
                     useNativeDriver: false
                 }),
                 Animated.timing(fadeAnim,{
                     toValue: 1,
-                    duration: 1900,
+                    duration: 1000,
                     useNativeDriver: false})
               ])
         ]).start();
@@ -76,7 +76,7 @@ const Quiz = ({ navigation }) => {
             }),
             Animated.timing(fadeAnim, {
                 toValue: 1,
-                duration: 1900,
+                duration: 1000,
                 useNativeDriver: false
             })
         ]).start();
@@ -146,14 +146,14 @@ const Quiz = ({ navigation }) => {
                  flex: 1,
                  paddingVertical: 20,
                  paddingHorizontal: 30,
-                 backgroundColor: 'white',
+                 backgroundColor: 'black',
                  position:'relative',
              }}>
           <View style={{
               marginTop: 50,
                 marginVertical: 10,
                 padding: 40,
-                borderTopRightRadius: 40,
+                // borderTopRightRadius: 40,
                 borderRadius: 10,
                 backgroundColor: 'white',
                 alignItems: 'center',
@@ -165,9 +165,9 @@ const Quiz = ({ navigation }) => {
             {/* Progress Bar */}
             <View style={{
                 width: '80%',
-                height: 5,
+                height: 6,
                 borderRadius: 5,
-                backgroundColor: '#00000020',
+                backgroundColor: '#2c3e50',
                 marginBottom: 10
 
             }}>

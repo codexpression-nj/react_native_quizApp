@@ -9,27 +9,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
-  const startQuiz = () => {
-    Animated.sequence([
-        Animated.timing(fadeAnim,{
-            toValue: 0,
-            duration: 100,
-            useNativeDriver: false
-        }),
-        Animated.timing(fadeAnim,{
-            toValue: 1,
-            duration: 1900,
-            useNativeDriver: false})
-      ]).start();
-
-    
-    Animated.timing(progress, {
-        toValue: currentQuestionIndex+1,
-        duration: 2000,
-        useNativeDriver: false,
-    }).start();
-
-}
+  
   return (
      <NavigationContainer>
         <Stack.Navigator initialRouteName="Welcome"> 
@@ -37,7 +17,7 @@ export default function App() {
             options={{ headerShown: false, }} />
             <Stack.Screen name="Home" component={Quiz} 
             options={{
-                title: 'Question',
+                title: 'Quiz',
                 headerStyle: {
                 backgroundColor: '#EDA276',
                 },
