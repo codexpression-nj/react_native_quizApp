@@ -143,10 +143,10 @@ const Quiz = ({ navigation }) => {
     return (
         <ScrollView style={styles.scrollView}>
         <View style={{
-                 flex: 1,
-                 paddingVertical: 20,
+                //  flex: 1,
+                 paddingVertical: 50,
                  paddingHorizontal: 30,
-                 backgroundColor: 'black',
+                 backgroundColor: '#141A33',
                  position:'relative',
              }}>
           <View style={{
