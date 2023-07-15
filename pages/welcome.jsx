@@ -2,6 +2,8 @@
 import React, { Component, useRef, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity,Animated} from 'react-native';
 import data from '../services/data';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { COLORS } from '../constants/theme';
 // import {, Text, View} from 'react-native';   
 
 // create a component
@@ -9,7 +11,7 @@ const Welcome = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={{margin:20}}>Get started to test your knowledge</Text>
+            <Text style={styles.title}>Get started to test your knowledge</Text>
             <TouchableOpacity
                 style={styles.buttonStart}
                 onPress={() => {
@@ -28,14 +30,17 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
+        backgroundColor: COLORS.primary
     },
     buttonStart:{
-        backgroundColor: 'black',
+        backgroundColor: COLORS.secondary,
         paddingHorizontal: 5,
         paddingVertical: 15,
          width: '50%', borderRadius: 15,
 
+    },
+    title:{
+        color:COLORS.white,margin:20
     },
     buttonTxt:{
         textAlign: 'center', color: 'white', fontSize: 20,
