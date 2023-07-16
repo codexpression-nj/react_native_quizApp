@@ -2,6 +2,7 @@
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import data from '../services/data';
+import { COLORS } from '../constants/theme';
 
 // create a component
 const Results = ({navigation,route}) => {
@@ -10,12 +11,7 @@ const Results = ({navigation,route}) => {
     const allQuestions = data;
 
     return (
-        <View style={{
-            flex: 1,
-            backgroundColor: 'white',
-            alignItems: 'center',
-            justifyContent: 'center'
-        }}>
+        <View style={styles.container}>
             <View style={{
                 backgroundColor: 'white',
                 width: '90%',
@@ -65,10 +61,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: COLORS.primary,
     },
     btn:{
-        backgroundColor: 'black',
+        backgroundColor: COLORS.secondary,
         paddingHorizontal: 5,
         paddingVertical: 15,
          width: '50%', borderRadius: 15,

@@ -5,6 +5,7 @@ import Results from './pages/results';
 import Quiz from './pages/quiz';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { COLORS } from './constants/theme';
 
 
 export default function App() {
@@ -35,7 +36,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -130,37 +130,25 @@ const Quiz = ({ navigation }) => {
         <ScrollView style={styles.scrollView}>
             <View style={{
                 //  flex: 1,
-                paddingVertical: 50,
+                paddingVertical: 30,
                 paddingHorizontal: 30,
-                backgroundColor: '#141A33',
+                backgroundColor: COLORS.primary,
                 position: 'relative',
             }}>
-                <View style={{
-                    marginTop: 50,
-                    marginVertical: 10,
-                    padding: 40,
-                    // borderTopRightRadius: 40,
-                    borderRadius: 10,
-                    backgroundColor: 'white',
-                    alignItems: 'center',
-                    shadowColor: '#171717',
-                    shadowOffset: { width: -6, height: 6 },
-                    shadowOpacity: 0.2,
-                    shadowRadius: 3,
-                }}>
+                <View style={styles.questionCard}>
                     {/* Progress Bar */}
                     <View style={{
                         width: '80%',
                         height: 6,
                         borderRadius: 5,
-                        backgroundColor: '#2c3e50',
+                        backgroundColor: COLORS.gray,
                         marginBottom: 10
 
                     }}>
                         <Animated.View style={[{
                             height: 5,
                             borderRadius: 5,
-                            // backgroundColor: COLORS.accent+'90'
+                            backgroundColor: COLORS.secondary
                         }, {
                             width: progressAnim
                         }]}>
@@ -188,7 +176,18 @@ const Quiz = ({ navigation }) => {
                     </View>
                 </View>
                 {renderOptions(navigation)}
+                <View style={{ flexDirection: 'row', alignContent: 'center', display: 'flex' }}>
+                    <TouchableOpacity>
+                        <Text style={{ color: 'white' }}>Quit</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.nextButton}>
+                        <Text style={{ color: 'white' }}>Next</Text>
+                    </TouchableOpacity>
+                </View>
+
             </View>
+
         </ScrollView>
     );
 };
@@ -201,28 +200,42 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#2c3e50',
     },
-    quizOptions: (isOptionsDisabled, option, correctOption, currentOptionSelected) => ({
-        backgroundColor:
-            isOptionsDisabled ?
-                option == correctOption
-                    ? 'green'
-                    : option == currentOptionSelected
-                        ? 'red'
-                        : 'grey'
-                : COLORS.primary,
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 10,
-        paddingHorizontal: 30,
+    questionCard: {
+        marginTop: 50,
         marginVertical: 10,
+        padding: 40,
+        // borderTopRightRadius: 40,
+        borderRadius: 10,
+        backgroundColor: 'white',
+        alignItems: 'center',
         shadowColor: '#171717',
-        shadowOffset: { width: -3, height: 3 },
+        shadowOffset: { width: -6, height: 6 },
         shadowOpacity: 0.2,
         shadowRadius: 3,
-        borderColor: COLORS.secondary,
-        borderWidth:1
-    })
+        // height:'40%'
+    },
+    quizOptions: (isOptionsDisabled, option, correctOption, currentOptionSelected) => ({
+        backgroundColor: COLORS.primary,
+        borderRadius: 5,
+        padding: 10,
+        paddingHorizontal: 50,
+        marginVertical: 10,
+
+        borderColor: isOptionsDisabled ?
+            option == correctOption
+                ? COLORS.green
+                : option == currentOptionSelected
+                    ? 'red'
+                    : 'grey'
+            : COLORS.secondary,
+        borderWidth: 0.5
+    }),
+    nextButton:{
+        paddingHorizontal: 5,
+        paddingVertical: 15,
+         width: '30%', borderRadius: 5,
+         backgroundColor: COLORS.secondary,
+    }
 
 });
 
