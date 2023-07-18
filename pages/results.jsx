@@ -13,7 +13,7 @@ const Results = ({navigation,route}) => {
     return (
         <View style={styles.container}>
             <View style={{
-                backgroundColor: 'white',
+                backgroundColor: COLORS.primary,
                 width: '90%',
                 borderRadius: 20,
                 padding: 20,
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.secondary,
         paddingHorizontal: 5,
         paddingVertical: 15,
-         width: '50%', borderRadius: 15,
+         width: '50%',
+          borderRadius: 15,
     }
 });
 

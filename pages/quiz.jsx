@@ -162,8 +162,8 @@ const Quiz = ({ navigation }) => {
                             alignItems: 'flex-end'
 
                         }}>
-                            <Text style={{ color: 'black', fontSize: 15, opacity: 0.6, marginRight: 2 }}>{currentQuestionIndex + 1}</Text>
-                            <Text style={{ color: 'black', fontSize: 13, opacity: 0.6 }}>/ {allQuestions.length}</Text>
+                            <Text style={{ color: COLORS.gray, fontSize: 15, opacity: 0.6, marginRight: 2 }}>{currentQuestionIndex + 1}</Text>
+                            <Text style={{ color: COLORS.gray, fontSize: 13, opacity: 0.6 }}>/ {allQuestions.length}</Text>
                         </View>
 
                         {/* Question */}
@@ -176,7 +176,7 @@ const Quiz = ({ navigation }) => {
                     </View>
                 </View>
                 {renderOptions(navigation)}
-                <View style={{ flexDirection: 'row', alignContent: 'center', display: 'flex' }}>
+                <View style={{ flexDirection: 'row', alignContent: 'space-between', display: 'flex' }}>
                     <TouchableOpacity>
                         <Text style={{ color: 'white' }}>Quit</Text>
                     </TouchableOpacity>
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: COLORS.primary,
     },
     questionCard: {
         marginTop: 50,

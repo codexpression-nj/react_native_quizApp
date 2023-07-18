@@ -36,14 +36,15 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.secondary,
         paddingHorizontal: 5,
         paddingVertical: 15,
-         width: '50%', borderRadius: 15,
+         width: '50%',
+          borderRadius: 15,
 
     },
     title:{
         color:COLORS.white,margin:20
     },
     buttonTxt:{
-        textAlign: 'center', color: 'white', fontSize: 20,
+        textAlign: 'center', color: COLORS.lightWhite, fontSize: 20,
    }
 });
 
