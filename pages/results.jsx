@@ -19,7 +19,7 @@ const Results = ({navigation,route}) => {
                 padding: 20,
                 alignItems: 'center'
             }}>
-                <Text style={{fontSize: 30}}>Your Score</Text>
+                <Text style={{color:COLORS.white,fontSize: 30}}>Your Score</Text>
 
                 <View style={{
                     flexDirection: 'row',
@@ -29,11 +29,11 @@ const Results = ({navigation,route}) => {
                 }}>
                     <Text style={{
                         fontSize: 100,
-                        color: 'black',
+                        color: COLORS.white,
                         fontWeight: 'bold'
                     }}>{score}</Text>
                     <Text style={{
-                        fontSize: 100, color: 'black',
+                        fontSize: 100, color: COLORS.white,
                         fontWeight: 'bold'
                     }}> / { allQuestions.length }</Text>
                 </View>

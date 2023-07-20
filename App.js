@@ -20,7 +20,7 @@ export default function App() {
             options={{
                 title: 'Quiz',
                 headerStyle: {
-                backgroundColor: '#141A33',
+                backgroundColor: COLORS.backgroundColour,
                 },
                 headerTintColor: '#fff',
                 headerTitleStyle: {

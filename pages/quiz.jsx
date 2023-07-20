@@ -117,7 +117,7 @@ const Quiz = ({ navigation }) => {
                                 onPress={() => validateAnswer(option, navigation)}
                                 key={option}
                                 style={styles.quizOptions(isOptionsDisabled, option, correctOption, currentOptionSelected)}>
-                                <Text style={{ fontSize: 15, color: 'white', textAlign: 'center', }} >{option}</Text>
+                                <Text style={{ fontSize: 15, color: COLORS.white, textAlign: 'center', }} >{option}</Text>
                             </TouchableOpacity>
                         </Animated.View>
                     ))
@@ -132,7 +132,7 @@ const Quiz = ({ navigation }) => {
                 //  flex: 1,
                 paddingVertical: 30,
                 paddingHorizontal: 30,
-                backgroundColor: COLORS.primary,
+                backgroundColor: COLORS.backgroundColour,
                 position: 'relative',
             }}>
                 <View style={styles.questionCard}>
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.backgroundColour,
     },
     questionCard: {
         marginTop: 50,
@@ -215,20 +215,21 @@ const styles = StyleSheet.create({
         // height:'40%'
     },
     quizOptions: (isOptionsDisabled, option, correctOption, currentOptionSelected) => ({
-        backgroundColor: COLORS.primary,
+        // backgroundColor:s COLORS.backgroundColour,
         borderRadius: 5,
-        padding: 10,
+        padding: 5,
         paddingHorizontal: 50,
-        marginVertical: 10,
-
-        borderColor: isOptionsDisabled ?
+        marginVertical: 5,
+        height: 50,
+        alignItems:'center',
+        backgroundColor: isOptionsDisabled ?
             option == correctOption
                 ? COLORS.green
                 : option == currentOptionSelected
                     ? 'red'
                     : 'grey'
-            : COLORS.secondary,
-        borderWidth: 0.5
+            : 'rgba(0, 128, 128, 0.8)',
+        // borderWidth: 1
     }),
     nextButton:{
         paddingHorizontal: 5,
