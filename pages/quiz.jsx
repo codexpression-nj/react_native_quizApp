@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
                 : option == currentOptionSelected
                     ? 'red'
                     : 'grey'
-            : 'rgba(0, 128, 128, 0.8)',
+            : '#46736E',
         // borderWidth: 1
     }),
     nextButton:{
