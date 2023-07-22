@@ -127,11 +127,11 @@ const Quiz = ({ navigation }) => {
         )
     }
     return (
-        <ScrollView style={styles.scrollView}>
+        <ScrollView contentContainerStyle={{flexGrow: 1}}>
             <View style={{
-                //  flex: 1,
-                paddingVertical: 30,
-                paddingHorizontal: 30,
+                 flex: 1,
+                // paddingVertical: 50,
+                paddingHorizontal: 16,
                 backgroundColor: COLORS.backgroundColour,
                 position: 'relative',
             }}>
@@ -154,9 +154,7 @@ const Quiz = ({ navigation }) => {
                         }]}>
                         </Animated.View>
                     </View>
-                    {/* Question */}
                     <View>
-                        {/* Question Counter */}
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'flex-end'
@@ -165,8 +163,7 @@ const Quiz = ({ navigation }) => {
                             <Text style={{ color: COLORS.gray, fontSize: 15, opacity: 0.6, marginRight: 2 }}>{currentQuestionIndex + 1}</Text>
                             <Text style={{ color: COLORS.gray, fontSize: 13, opacity: 0.6 }}>/ {allQuestions.length}</Text>
                         </View>
-
-                        {/* Question */}
+   
                         <Text style={{
                             color: 'black',
                             fontSize: 18,
@@ -174,9 +171,12 @@ const Quiz = ({ navigation }) => {
 
                         }}>{allQuestions[currentQuestionIndex]?.question}</Text>
                     </View>
+                   
                 </View>
+            
                 {renderOptions(navigation)}
-                <View style={{ flexDirection: 'row', alignContent: 'space-between', display: 'flex' }}>
+             
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', display: 'flex' ,alignItems:'center'}}>
                     <TouchableOpacity>
                         <Text style={{ color: 'white' }}>Quit</Text>
                     </TouchableOpacity>
@@ -185,9 +185,8 @@ const Quiz = ({ navigation }) => {
                         <Text style={{ color: 'white' }}>Next</Text>
                     </TouchableOpacity>
                 </View>
-
             </View>
-
+         
         </ScrollView>
     );
 };
@@ -236,6 +235,7 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
          width: '30%', borderRadius: 5,
          backgroundColor: COLORS.secondary,
+         alignItems:'center'
     }
 
 });
