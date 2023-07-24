@@ -141,14 +141,14 @@ const Quiz = ({ navigation }) => {
                         width: '80%',
                         height: 6,
                         borderRadius: 5,
-                        backgroundColor: COLORS.gray,
+                        backgroundColor: COLORS.secondary,
                         marginBottom: 10
 
                     }}>
                         <Animated.View style={[{
                             height: 5,
                             borderRadius: 5,
-                            backgroundColor: COLORS.secondary
+                            backgroundColor: COLORS.primary
                         }, {
                             width: progressAnim
                         }]}>
@@ -157,7 +157,9 @@ const Quiz = ({ navigation }) => {
                     <View>
                         <View style={{
                             flexDirection: 'row',
-                            alignItems: 'flex-end'
+                            alignItems: 'flex-end',
+                            margin:5
+                            
 
                         }}>
                             <Text style={{ color: COLORS.gray, fontSize: 15, opacity: 0.6, marginRight: 2 }}>{currentQuestionIndex + 1}</Text>
@@ -177,12 +179,12 @@ const Quiz = ({ navigation }) => {
                 {renderOptions(navigation)}
              
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', display: 'flex' ,alignItems:'center'}}>
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.nextButton}>
                         <Text style={{ color: 'white' }}>Quit</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.nextButton}>
-                        <Text style={{ color: 'white' }}>Next</Text>
+                        <Text style={{ color: COLORS.secondary }}>Next</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -219,7 +221,7 @@ const styles = StyleSheet.create({
         padding: 5,
         paddingHorizontal: 50,
         marginVertical: 5,
-        height: 50,
+        height: 60,
         alignItems:'center',
         backgroundColor: isOptionsDisabled ?
             option == correctOption
@@ -229,12 +231,13 @@ const styles = StyleSheet.create({
                     : 'grey'
             : '#46736E',
         // borderWidth: 1
+        justifyContent:'center'
     }),
     nextButton:{
         paddingHorizontal: 5,
         paddingVertical: 15,
          width: '30%', borderRadius: 5,
-         backgroundColor: COLORS.secondary,
+        //  backgroundColor: COLORS.white,
          alignItems:'center',
          marginTop:20
     }

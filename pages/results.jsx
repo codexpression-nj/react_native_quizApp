@@ -44,7 +44,7 @@ const Results = ({navigation,route}) => {
                     navigation.navigate('Welcome');}}
                 style={styles.btn}>
                     <Text style={{
-                        textAlign: 'center', color: 'white', fontSize: 20
+                        textAlign: 'center', color: COLORS.secondary, fontSize: 20
                     }}>Retry</Text>
                 </TouchableOpacity>
 
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.backgroundColour,
     },
     btn:{
-        backgroundColor: COLORS.secondary,
+        backgroundColor: COLORS.white,
         paddingHorizontal: 5,
         paddingVertical: 15,
          width: '50%',

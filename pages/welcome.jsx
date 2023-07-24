@@ -15,7 +15,7 @@ const Welcome = ({ navigation }) => {
             <TouchableOpacity
                 style={styles.buttonStart}
                 onPress={() => {
-                    navigation.navigate('Home')
+                    navigation.navigate('Categories')
                 }
                 }>
                 <Text style={styles.buttonTxt}>Start</Text>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.backgroundColour
     },
     buttonStart:{
-        backgroundColor: COLORS.secondary,
+        backgroundColor: COLORS.white,
         paddingHorizontal: 5,
         paddingVertical: 15,
          width: '50%',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         color:COLORS.white,margin:20
     },
     buttonTxt:{
-        textAlign: 'center', color: COLORS.lightWhite, fontSize: 20,
+        textAlign: 'center', color: COLORS.secondary, fontSize: 20,
    }
 });
 

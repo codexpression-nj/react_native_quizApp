@@ -6,6 +6,7 @@ import Quiz from './pages/quiz';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { COLORS } from './constants/theme';
+import Categories from './pages/categories';
 
 
 export default function App() {
@@ -27,6 +28,8 @@ export default function App() {
                 fontWeight: 'bold',
                 }, }}/>
             <Stack.Screen name="Result" component={Results} 
+            options={{headerShown: false}}/>
+             <Stack.Screen name="Categories" component={Categories} 
             options={{headerShown: false}}/>
         </Stack.Navigator>
     </NavigationContainer>
