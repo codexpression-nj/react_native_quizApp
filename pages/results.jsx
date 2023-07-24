@@ -1,14 +1,14 @@
 //import liraries
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import data from '../services/data';
+import data, { programmingLanguagesAndFrameworks } from '../services/data';
 import { COLORS } from '../constants/theme';
 
 // create a component
 const Results = ({navigation,route}) => {
   
     const [score, setScore] = useState(route.params.score)
-    const allQuestions = data;
+    const allQuestions = programmingLanguagesAndFrameworks;
 
     return (
         <View style={styles.container}>
@@ -40,7 +40,6 @@ const Results = ({navigation,route}) => {
                 {/* Retry Quiz button */}
                 <TouchableOpacity
                 onPress={()=>{
-                    // restartQuiz();
                     navigation.navigate('Welcome');}}
                 style={styles.btn}>
                     <Text style={{
