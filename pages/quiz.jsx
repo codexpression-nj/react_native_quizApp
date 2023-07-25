@@ -1,14 +1,14 @@
 //import liraries
 import React, { Component, useEffect, useRef, useState } from 'react';
 import { View, Text, StyleSheet, Animated, TouchableOpacity } from 'react-native';
-import data, { programmingLanguagesAndFrameworks } from '../services/data';
+import data, { appDeploymentandDistribution, programmingLanguagesAndFrameworks } from '../services/data';
 import { ScrollView } from 'react-native';
 import { COLORS } from '../constants/theme';
 
 // create a component
 const Quiz = ({ navigation }) => {
 
-    const allQuestions = programmingLanguagesAndFrameworks;
+    const allQuestions = appDeploymentandDistribution;
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [isOptionsDisabled, setIsOptionsDisabled] = useState(false);
     const [currentOptionSelected, setCurrentOptionSelected] = useState(null);

@@ -5,9 +5,9 @@ import { COLORS } from '../constants/theme';
 import { LinearGradient } from "expo-linear-gradient";
 import categorie from '../services/categorie';
 
-const Item = ({ title},navigation) => (
+const Item = ({ title,onPress}) => (
     <TouchableOpacity
-        onPress={() => navigation.navigate('Quiz')}
+        onPress={onPress}
         style={styles.itemContainer}
     >
         <Text style={styles.itemText}>{title}</Text>
@@ -21,7 +21,15 @@ const Categories = ({navigation}) => {
         <View style={styles.container}>
             <FlatList
                 data={categorie}
-                renderItem={renderItem}
+                renderItem={
+                    ({ item }) => <Item title={item.name} 
+                    
+                        onPress={() =>{
+                            navigation.navigate('Home')
+                        }}
+                    />
+
+                }
                 keyExtractor={(item) => item.id}
             />
         </View>
