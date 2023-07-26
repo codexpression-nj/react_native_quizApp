@@ -239,3 +239,106 @@ export const programmingLanguagesAndFrameworks =
     }
   ]
 
+   export const  appDevelopmentTools =   [
+    {
+      "question": "Which IDE is commonly used for Android app development?",
+      "options": ["Xcode", "Visual Studio", "Android Studio", "Eclipse"],
+      "answer": "Android Studio"
+    },
+    {
+      "question": "What version control system can help manage code in a collaborative environment?",
+      "options": ["Git", "Mercurial", "SVN", "Perforce"],
+      "answer": "Git"
+    },
+    {
+      "question": "Name a popular tool used for mobile app UI prototyping.",
+      "options": ["InVision", "Sketch", "Adobe Illustrator", "Figma"],
+      "answer": "InVision"
+    },
+    {
+      "question": "Which tool is used to analyze and improve app performance on Android?",
+      "options": ["JIRA", "Charles Proxy", "App Center", "Android Profiler"],
+      "answer": "Android Profiler"
+    },
+    {
+      "question": "What tool can be used to test iOS apps on real devices without a physical connection?",
+      "options": ["TestFlight", "App Center", "Firebase Test Lab", "Crashlytics"],
+      "answer": "TestFlight"
+    },
+    {
+      "question": "Which tool provides real-time crash reporting for mobile apps?",
+      "options": ["Xcode", "Crashlytics", "TestFlight", "Charles Proxy"],
+      "answer": "Crashlytics"
+    },
+    {
+      "question": "What is the purpose of using CocoaPods in iOS app development?",
+      "options": ["Code signing", "Dependency management", "Code obfuscation", "User interface design"],
+      "answer": "Dependency management"
+    },
+    {
+      "question": "Which tool allows you to write and run automated tests for Android apps?",
+      "options": ["Xcode", "Android Studio", "Appium", "Espresso"],
+      "answer": "Espresso"
+    },
+    {
+      "question": "What is the primary use of Gradle in Android app development?",
+      "options": ["User interface design", "Dependency management", "Code signing", "Build automation"],
+      "answer": "Build automation"
+    },
+    {
+      "question": "Which tool is used to inspect and debug UI elements in iOS apps?",
+      "options": ["App Center", "Android Profiler", "Xcode", "Reveal"],
+      "answer": "Reveal"
+    },
+    {
+      "question": "What tool allows you to develop and debug React Native apps?",
+      "options": ["Android Studio", "Xcode", "Visual Studio Code", "React Native Debugger"],
+      "answer": "Visual Studio Code"
+    },
+    {
+      "question": "Which tool provides cloud-based backend services for mobile apps?",
+      "options": ["Firebase", "MongoDB", "DynamoDB", "Realm"],
+      "answer": "Firebase"
+    },
+    {
+      "question": "What is the purpose of Android Asset Packaging Tool (AAPT) in app development?",
+      "options": ["Code signing", "Resource preprocessing", "Dependency management", "User interface design"],
+      "answer": "Resource preprocessing"
+    },
+    {
+      "question": "Which tool can be used for continuous integration and delivery in mobile app development?",
+      "options": ["Jenkins", "App Center", "Travis CI", "Bitrise"],
+      "answer": "Bitrise"
+    },
+    {
+      "question": "What is the primary purpose of using ProGuard in Android app development?",
+      "options": ["Build automation", "Dependency management", "Code obfuscation", "User interface design"],
+      "answer": "Code obfuscation"
+    },
+    {
+      "question": "Which tool provides a platform for managing and testing mobile app builds?",
+      "options": ["App Center", "Firebase", "Crashlytics", "TestFlight"],
+      "answer": "App Center"
+    },
+    {
+      "question": "What tool allows you to create cross-platform mobile apps using web technologies?",
+      "options": ["Flutter", "React Native", "Xamarin", "Ionic"],
+      "answer": "Ionic"
+    },
+    {
+      "question": "Which tool is used for automated testing of iOS apps on physical devices?",
+      "options": ["Espresso", "Appium", "Xcode", "Firebase Test Lab"],
+      "answer": "Appium"
+    },
+    {
+      "question": "What is the primary function of Android Debug Bridge (ADB) in app development?",
+      "options": ["Dependency management", "Code obfuscation", "Build automation", "Device communication"],
+      "answer": "Device communication"
+    },
+    {
+      "question": "Which tool allows you to inspect and debug network traffic for mobile apps?",
+      "options": ["Charles Proxy", "Reveal", "Android Profiler", "Fiddler"],
+      "answer": "Charles Proxy"
+    }
+  ]
+
