@@ -44,7 +44,9 @@ const styles = StyleSheet.create({
         color:COLORS.white,margin:20
     },
     buttonTxt:{
-        textAlign: 'center', color: COLORS.secondary, fontSize: 20,
+        textAlign: 'center', 
+        color: COLORS.secondary, 
+        fontSize: 20,
    }
 });
 

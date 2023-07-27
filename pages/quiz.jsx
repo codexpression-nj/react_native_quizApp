@@ -236,7 +236,8 @@ const styles = StyleSheet.create({
     nextButton:{
         paddingHorizontal: 5,
         paddingVertical: 15,
-         width: '30%', borderRadius: 5,
+         width: '30%', 
+         borderRadius: 5,
         //  backgroundColor: COLORS.white,
          alignItems:'center',
          marginTop:20

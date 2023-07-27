@@ -15,7 +15,6 @@ const Item = ({ title,onPress}) => (
 );
 // create a component
 const Categories = ({navigation}) => {
-    const renderItem = ({ item }) => <Item navigate={navigation} title={item.name} />;
 
     return (
         <View style={styles.container}>
@@ -23,12 +22,10 @@ const Categories = ({navigation}) => {
                 data={categorie}
                 renderItem={
                     ({ item }) => <Item title={item.name} 
-                    
                         onPress={() =>{
                             navigation.navigate('Home')
                         }}
                     />
-
                 }
                 keyExtractor={(item) => item.id}
             />
