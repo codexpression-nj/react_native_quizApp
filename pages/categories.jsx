@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { COLORS } from '../constants/theme';
-import { LinearGradient } from "expo-linear-gradient";
 import categorie from '../services/categorie';
 
 const Item = ({ title,onPress}) => (
